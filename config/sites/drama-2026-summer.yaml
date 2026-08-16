@@ -1,0 +1,118 @@
+site_id: drama-2026-summer
+name: 2026年夏ドラマランキング
+theme: 2026年夏ドラマ
+target_audience: 2026年夏ドラマを楽しみたい視聴者・ドラマファン・話題作を探している方
+main_keyword: 2026夏ドラマ ランキング
+base_url: https://kenjatimejp.com
+publisher: hugo
+
+article_plan:
+  top_page: 1
+  ranking_articles: 1
+  individual_articles: 6
+  faq_articles: 1
+  related_articles: 0
+
+max_monthly_cost_usd: 10.0
+
+ranking_targets:
+  - name: VIVANT（続編）
+    url: https://www.tbs.co.jp/VIVANT2026/
+    category: サスペンス・アクション
+    price_free: true
+    price_paid: "Paraviで配信"
+    description: 堺雅人主演・TBS日曜劇場。2023年の大ヒット作「VIVANT」の続編。アゼルバイジャンでの大規模ロケを敢行し、国際諜報組織と主人公の戦いを描く超大作サスペンス。
+    pros:
+      - 前作から続く壮大なスケールのストーリー
+      - 豪華キャスト（堺雅人・阿部寛・二階堂ふみ・役所広司）
+      - 大規模海外ロケによる映画級の映像クオリティ
+    cons:
+      - 前作を見ていないと設定が複雑
+      - 期待値が高い分、前作超えのハードルも高い
+
+  - name: 告白－25年目の秘密－
+    url: https://www.ntv.co.jp/kokuhaku2026/
+    category: ラブサスペンス
+    price_free: true
+    price_paid: "Huluで配信"
+    description: 松村北斗（SixTONES）地上波ドラマ初単独主演。25年間ひとりの女性を陰ながら支え続けてきた男の純愛と狂気を描くラブサスペンス。日本テレビ系土曜21:00放送。
+    pros:
+      - 松村北斗の初単独主演で注目度が高い
+      - 純愛×サスペンスの独自ジャンル
+      - 社会問題（職場での対立・いじめ）も絡む重厚なストーリー
+    cons:
+      - ストーカー的要素が好みを分ける可能性がある
+      - 全話を通して視聴しないと伏線が追いにくい
+
+  - name: マイ・フィクション
+    url: https://www.tv-asahi.co.jp/myfiction/
+    category: サスペンス・ラブストーリー
+    price_free: true
+    price_paid: "TELASAで配信"
+    description: 玉森裕太（Kis-My-Ft2）4年ぶりの地上波連続ドラマ主演。事故で意識を失った男が、自分になりすました他人と対峙するオリジナルサスペンス・ラブストーリー。テレビ朝日系日曜22:15放送。
+    pros:
+      - 玉森裕太4年ぶりの主演で話題性が高い
+      - なりすまし設定のオリジナル展開
+      - 森川葵・宮澤エマら実力派俳優が共演
+    cons:
+      - 設定が複雑でついていけないと感じる視聴者もいる
+      - 放送時間が22:15と遅め
+
+  - name: 一次元の挿し木
+    url: https://www.ntv.co.jp/ichijigen/
+    category: ヒューマンミステリー
+    price_free: true
+    price_paid: "Huluで配信"
+    description: 山田涼介（Hey! Say! JUMP）主演。ヒマラヤで発掘された200年前の人骨が失踪した義妹のDNAと一致するという衝撃の設定から始まるヒューマンミステリー。日本テレビ系日曜22:30放送。
+    pros:
+      - 時を超えた謎という独自の切り口
+      - 佐々木蔵之介・鈴木保奈美など実力派ベテランが出演
+      - 二転三転する展開で予測不能なストーリー
+    cons:
+      - ミステリー色が強く好みを選ぶ
+      - 放送時間が22:30と深夜帯
+
+  - name: Tシャツが乾くまで
+    url: https://www.tbs.co.jp/tshirts2026/
+    category: ヒューマンドラマ
+    price_free: true
+    price_paid: "Paraviで配信"
+    description: 蒼井優主演・TBS金曜ドラマ。ある夏の事故をきっかけに崩れていく二組の夫婦の日常と、暴かれる「第3金曜日の秘密」を描く大人のヒューマンドラマ。金曜22:00放送。
+    pros:
+      - 蒼井優・松山ケンイチら演技派キャストが揃う
+      - 夫婦・家族の普遍的なテーマで共感しやすい
+      - 日常に潜む秘密というリアルな設定
+    cons:
+      - 派手なアクションや特殊設定はなく、地味に感じる人も
+      - 不倫要素があり視聴者を選ぶ
+
+  - name: ラストノート
+    url: https://www.fujitv.co.jp/lastnote/
+    category: 純愛ドラマ
+    price_free: true
+    price_paid: "Huluで配信"
+    description: 内田有紀×寺西拓人（Travis Japan）主演。19歳差の男女が惹かれ合う大人の純愛ドラマ。タイトルは香水の最後の香り「ラストノート」に由来。フジテレビ系木曜劇場22:00放送。
+    pros:
+      - 年齢差のある純愛という珍しい設定
+      - 内田有紀の円熟した演技と寺西拓人のフレッシュさの対比
+      - 香りをテーマにした唯一無二の世界観
+    cons:
+      - 純愛ドラマのため刺激的な展開は少なめ
+      - 世代によって共感度が分かれる
+
+categories:
+  - name: サスペンス・アクション
+    slug: suspense-action
+    description: スリリングな展開が楽しめる作品
+  - name: ラブサスペンス
+    slug: love-suspense
+    description: 恋愛とサスペンスが融合した作品
+  - name: ヒューマンドラマ
+    slug: human-drama
+    description: 人間関係や感情を深く描いた作品
+  - name: 純愛ドラマ
+    slug: pure-love
+    description: 一途な愛を描いたラブストーリー
+  - name: ヒューマンミステリー
+    slug: human-mystery
+    description: 人間ドラマとミステリーが融合した作品

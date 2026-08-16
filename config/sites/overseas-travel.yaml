@@ -1,0 +1,154 @@
+site_id: overseas-travel
+name: 予算別 海外旅行先ランキング
+theme: 海外旅行先
+target_audience: 予算を決めて海外旅行の行き先を探している旅行好き・カップル・家族連れ
+main_keyword: 海外旅行 予算別 ランキング
+base_url: https://kenjatimejp.com
+publisher: hugo
+
+article_plan:
+  top_page: 0
+  ranking_articles: 1
+  individual_articles: 0
+  faq_articles: 0
+  related_articles: 0
+
+max_monthly_cost_usd: 10.0
+
+ranking_targets:
+  - name: ソウル（韓国）
+    url: https://japanese.visitseoul.net/
+    category: 10万円台
+    price_free: false
+    price_paid: "8〜10万円（3泊4日目安）"
+    description: フライト2時間台でLCCも豊富。グルメ・買い物・エステが充実し弾丸旅行にも最適な定番の近場旅行先。
+    pros:
+      - フライト時間が短く弾丸旅行向き
+      - LCCの選択肢が多く航空券が安い
+      - グルメ・コスメ・買い物が充実
+    cons:
+      - 週末やコスメシーズンは混雑・割高になりやすい
+      - 冬場は防寒対策が必要
+
+  - name: 台北（台湾）
+    url: https://jp.taiwan.net.tw/
+    category: 10万円台
+    price_free: false
+    price_paid: "7〜10万円（3泊4日目安）"
+    description: 治安が良く親日的で初めての海外旅行にも人気。夜市グルメや九份などの観光地が近距離に集まる。
+    pros:
+      - 治安が良く一人旅・女子旅にも安心
+      - 夜市など安価で楽しめるグルメが豊富
+      - 九份・十分など日帰り観光地が充実
+    cons:
+      - 夏場は高温多湿で観光がやや大変
+      - 台風シーズン（7〜9月）は運休リスクあり
+
+  - name: グアム
+    url: https://www.visitguam.jp/
+    category: 10万円台
+    price_free: false
+    price_paid: "9〜12万円（3泊4日目安）"
+    description: 日本から約3時間半、時差も1時間で子連れ旅行にも人気。ビーチリゾートとショッピングを短期間で楽しめる。
+    pros:
+      - 時差が少なく子連れ旅行の負担が小さい
+      - オールインクルーシブのホテルが選びやすい
+      - 英語圏で買い物・免税店も充実
+    cons:
+      - 台風の影響を受けやすい時期がある
+      - 観光の目新しさはアジア近隣国よりやや少ない
+
+  - name: バリ島（インドネシア）
+    url: https://www.indonesia.travel/jp/ja/home
+    category: 20万円台
+    price_free: false
+    price_paid: "18〜23万円（4泊6日目安）"
+    description: 高級ヴィラから安宿まで宿泊の幅が広く、ビーチ・ライステラス・寺院観光を組み合わせられる人気リゾート。
+    pros:
+      - 高コスパな高級ヴィラ・スパが充実
+      - ビーチ以外にも棚田・寺院など見どころが多い
+      - 直行便で最短7時間台とアクセスが改善
+    cons:
+      - 飛行時間が長く体力的な負担がある
+      - 雨季（11〜3月）はスコールに注意が必要
+
+  - name: ダナン（ベトナム）
+    url: https://vietnam.travel/
+    category: 20万円台
+    price_free: false
+    price_paid: "15〜20万円（4泊5日目安）"
+    description: 白砂のビーチと世界遺産ホイアン旧市街が近く、コスパの良いリゾートホテルが多いことで近年人気が急上昇。
+    pros:
+      - 5つ星ホテルでも比較的安く泊まれる
+      - ホイアン・フエなど世界遺産へ日帰り可能
+      - ベトナム料理が日本人の口に合いやすい
+    cons:
+      - 直行便の便数が少なく日程の融通が利きにくい
+      - 観光地では価格交渉が必要な場面がある
+
+  - name: シンガポール
+    url: https://www.visitsingapore.com/ja_jp/
+    category: 20万円台
+    price_free: false
+    price_paid: "18〜22万円（3泊5日目安）"
+    description: 治安・衛生面が良く公用語も英語中心で移動しやすい都市国家。マリーナベイやセントーサ島など観光地がコンパクトにまとまる。
+    pros:
+      - 治安が良く街のインフラが整っている
+      - 多民族グルメを一都市で楽しめる
+      - 直行便が多く時差も1時間と少ない
+    cons:
+      - 物価が高くホテル・食事のグレードで予算が変動しやすい
+      - 罰則が厳しい規則が多く事前確認が必要
+
+  - name: ハワイ・オアフ島
+    url: https://www.gohawaii.jp/
+    category: 30万円台
+    price_free: false
+    price_paid: "28〜35万円（4泊6日目安）"
+    description: 日本人に人気No.1クラスのリゾート地。ワイキキビーチや大自然、ショッピングまで揃い、家族旅行から新婚旅行まで需要が幅広い。
+    pros:
+      - 治安が良く日本語対応も充実
+      - ビーチ・自然・買い物のバランスが良い
+      - 直行便が多くフライト時間も比較的短い
+    cons:
+      - 円安の影響で現地物価が高く感じられやすい
+      - 人気ホテルはハイシーズンに早期満室になりやすい
+
+  - name: モルディブ
+    url: https://visitmaldives.com/
+    category: 30万円台
+    price_free: false
+    price_paid: "30〜40万円（4泊6日目安）"
+    description: 水上ヴィラとエメラルドグリーンの海が象徴的な、記念日・ハネムーン需要の高い1島1リゾート型の楽園。
+    pros:
+      - 水上ヴィラなど非日常感の高い宿泊体験
+      - 島全体がリゾートのためプライベート感が高い
+      - シュノーケリングなどマリンアクティビティが充実
+    cons:
+      - 直行便がなく乗り継ぎで移動時間が長い
+      - リゾート内の飲食代が高額になりやすい
+
+  - name: パリ（フランス）
+    url: https://jp.france.fr/ja
+    category: 30万円台
+    price_free: false
+    price_paid: "28〜35万円（5泊7日目安）"
+    description: 美術館・グルメ・ファッションが揃う世界屈指の観光都市。ヨーロッパ周遊の起点としても選ばれる定番の憧れの旅行先。
+    pros:
+      - ルーブル美術館やエッフェル塔など名所が凝縮
+      - グルメ・スイーツ・ファッションのレベルが高い
+      - 鉄道で近隣国へ周遊しやすい
+    cons:
+      - フライト時間が12時間以上と長時間移動になる
+      - スリなど軽犯罪への注意が必要
+
+categories:
+  - name: 10万円台
+    slug: budget-100k
+    description: LCCや近距離アジアを中心にした、コスパ重視の弾丸海外旅行先
+  - name: 20万円台
+    slug: budget-200k
+    description: リゾートと観光をバランス良く楽しめる、王道クラスの海外旅行先
+  - name: 30万円台
+    slug: budget-300k
+    description: 長距離・高級ホテルを含む、記念日や特別な旅行におすすめの海外旅行先

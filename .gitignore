@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# 環境変数・認証情報
+.env
+credentials/
+
+# Hugoビルド成果物・キャッシュ（CIで再生成する）
+output/portal/public/
+output/portal/resources/
+output/portal/.hugo_build.lock
+
+# ローカルのNetlify CLIリンク情報
+output/portal/.netlify/

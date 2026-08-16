@@ -1,0 +1,48 @@
+{{- define "main" }}
+
+{{- if site.Params.homeInfoParams }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+<div class="theme-grid">
+  {{- range sort site.Data.themes "title" }}
+  <a class="theme-card" href="{{ .url | relURL }}">
+    <h2>{{ .title }}</h2>
+    <p>{{ .description }}</p>
+  </a>
+  {{- end }}
+</div>
+
+<style>
+  .theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .theme-card {
+    display: block;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    color: var(--content);
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+  }
+  .theme-card:hover {
+    border-color: var(--primary);
+  }
+  .theme-card h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+    color: var(--primary);
+  }
+  .theme-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary);
+  }
+</style>
+
+{{- end }}

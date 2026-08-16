@@ -1,0 +1,44 @@
+baseURL = "https://kenjatimejp.com/"
+languageCode = "ja"
+title = "kenjatimejp - ランキングまとめ"
+theme = "PaperMod"
+defaultContentLanguage = "ja"
+timeZone = "Asia/Tokyo"
+
+[params]
+  description = "AIツール・ドラマ・エンタメなど、さまざまなジャンルのおすすめランキングをまとめてご紹介します。"
+  author = "kenjatimejp編集部"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+
+  [params.homeInfoParams]
+    Title = "kenjatimejp - ランキングまとめ"
+    Content = "AIツール・2026年夏ドラマなど、さまざまなジャンルのおすすめランキングを徹底比較。あなたにぴったりの一本・一つを見つけよう。"
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
+
+[menu]
+  [[menu.footer]]
+    name = "プライバシーポリシー"
+    url = "/privacy/"
+    weight = 10
+  [[menu.footer]]
+    name = "お問い合わせ"
+    url = "/contact/"
+    weight = 20
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,16 @@
+- id: drama-2026-summer
+  title: エンタメ
+  description: 2026年夏ドラマの最新ランキング・比較・おすすめ情報をお届けします。
+  url: /drama-2026-summer/
+- id: overseas-travel
+  title: 海外旅行
+  description: 海外旅行先の最新ランキング・比較・おすすめ情報をお届けします。
+  url: /overseas-travel/
+- id: ai-tools
+  title: AIツールランキング
+  description: AI（人工知能）ツール・サービスの最新ランキング・比較・おすすめ情報をお届けします。
+  url: /ai-tools/
+- id: world-heritage
+  title: 死ぬまでに行きたい世界遺産ランキング
+  description: 世界遺産の最新ランキング・比較・おすすめ情報をお届けします。
+  url: /world-heritage/

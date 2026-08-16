@@ -1,0 +1,4 @@
+/ranking/*             /ai-tools/ranking/:splat      301
+/individual/*           /ai-tools/individual/:splat   301
+/faq/*                   /ai-tools/faq/:splat          301
+/drama-2026-summer/drama-2026-summer-ranking-top6/  /drama-2026-summer/ranking/drama-2026-summer-ranking-top6/  301

@@ -1,0 +1,101 @@
+site_id: ai-tools
+name: AIツールランキング
+theme: AI（人工知能）ツール・サービス
+target_audience: AIツールを探しているビジネスパーソン・エンジニア・クリエイター
+main_keyword: AIツール ランキング
+base_url: https://kenjatimejp.com
+publisher: hugo
+
+article_plan:
+  top_page: 1
+  ranking_articles: 2
+  individual_articles: 5
+  faq_articles: 1
+  related_articles: 1
+
+max_monthly_cost_usd: 10.0
+
+ranking_targets:
+  - name: ChatGPT
+    url: https://chat.openai.com
+    category: チャットAI
+    price_free: true
+    price_paid: "月額$20（Plus）"
+    description: OpenAIが開発した世界最大のチャットAI。GPT-4oを搭載。
+    pros:
+      - 高い対話品質
+      - プラグイン・GPTs対応
+      - 画像生成（DALL-E）内蔵
+    cons:
+      - 無料版は機能制限あり
+      - 混雑時に応答が遅くなることがある
+
+  - name: Claude
+    url: https://claude.ai
+    category: チャットAI
+    price_free: true
+    price_paid: "月額$20（Pro）"
+    description: Anthropicが開発。長文処理・コーディング・分析に強い。
+    pros:
+      - 長いコンテキスト処理が得意
+      - 安全性重視の設計
+      - 日本語品質が高い
+    cons:
+      - 画像生成機能なし
+      - 無料版は利用制限あり
+
+  - name: Gemini
+    url: https://gemini.google.com
+    category: チャットAI
+    price_free: true
+    price_paid: "月額$19.99（Advanced）"
+    description: Googleが開発。Google WorkspaceやGmailとの連携が強み。
+    pros:
+      - Google検索との統合
+      - 最新情報へのアクセス
+      - Google Docsなどと連携
+    cons:
+      - 専門的な推論ではGPT-4に劣る場面も
+      - UIが頻繁に変わる
+
+  - name: Perplexity AI
+    url: https://www.perplexity.ai
+    category: 検索特化AI
+    price_free: true
+    price_paid: "月額$20（Pro）"
+    description: AIによるリアルタイム検索エンジン。出典付き回答が特徴。
+    pros:
+      - 最新情報を参照した回答
+      - 出典が明示される
+      - 調査・リサーチに最適
+    cons:
+      - 創作・コーディングは他ツールが優秀
+      - 長文生成は苦手
+
+  - name: Copilot
+    url: https://copilot.microsoft.com
+    category: チャットAI
+    price_free: true
+    price_paid: "Microsoft 365に含む"
+    description: MicrosoftがOpenAIと共同開発。Windows・Officeと深く統合。
+    pros:
+      - Windows標準搭載
+      - Office製品との連携
+      - 無料でGPT-4相当を利用可
+    cons:
+      - Microsoft環境外では使いにくい
+      - カスタマイズ性が低い
+
+categories:
+  - name: チャットAI
+    slug: chat-ai
+    description: テキスト対話型のAIアシスタント
+  - name: 検索特化AI
+    slug: search-ai
+    description: リアルタイム検索に特化したAIツール
+  - name: 画像生成AI
+    slug: image-ai
+    description: テキストから画像を生成するAIツール
+  - name: コーディングAI
+    slug: coding-ai
+    description: プログラミングを支援するAIツール

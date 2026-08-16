@@ -1,0 +1,62 @@
+name: Sync AdSense Revenue & Search Console Metrics
+
+on:
+  schedule:
+    # 毎日 21:00 UTC (JST 翌 06:00) に実行
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write Google API credentials
+        run: |
+          mkdir -p credentials
+          printf '%s' "$GOOGLE_CLIENT_SECRET_JSON" > credentials/adsense_client_secret.json
+          printf '%s' "$GOOGLE_TOKEN_JSON" > credentials/adsense_token.json
+        env:
+          GOOGLE_CLIENT_SECRET_JSON: ${{ secrets.GOOGLE_CLIENT_SECRET_JSON }}
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+
+      - name: Sync metrics for each site
+        env:
+          ADSENSE_ACCOUNT_ID: ${{ secrets.ADSENSE_ACCOUNT_ID }}
+          GOOGLE_CLIENT_SECRET_PATH: credentials/adsense_client_secret.json
+          GOOGLE_TOKEN_PATH: credentials/adsense_token.json
+        run: |
+          for f in config/sites/*.yaml; do
+            site_id=$(basename "$f" .yaml)
+            echo "=== syncing $site_id (AdSense) ==="
+            python -m src.cli.main sync-adsense --site "$site_id" --days 3 || echo "!! $site_id のAdSense同期に失敗しました（処理は継続します）"
+            echo "=== syncing $site_id (Search Console) ==="
+            python -m src.cli.main sync-search-console --site "$site_id" --days 3 || echo "!! $site_id のSearch Console同期に失敗しました（処理は継続します）"
+          done
+
+      - name: Remove credential files
+        if: always()
+        run: rm -rf credentials
+
+      - name: Commit updated database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- data/db/sites.db; then
+            git add data/db/sites.db
+            git commit -m "chore: sync AdSense revenue and Search Console metrics"
+            git push
+          else
+            echo "変更なし"
+          fi
