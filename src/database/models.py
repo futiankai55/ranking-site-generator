@@ -81,6 +81,19 @@ class SearchMetrics(Base):
     synced_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 
+class TrafficMetrics(Base):
+    __tablename__ = "traffic_metrics"
+    __table_args__ = (UniqueConstraint("site_id", "date"),)
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    site_id: Mapped[str] = mapped_column(String, ForeignKey("sites.id"), nullable=False)
+    date: Mapped[str] = mapped_column(String, nullable=False)
+    sessions: Mapped[int] = mapped_column(Integer, default=0)
+    active_users: Mapped[int] = mapped_column(Integer, default=0)
+    page_views: Mapped[int] = mapped_column(Integer, default=0)
+    synced_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+
 class InternalLink(Base):
     __tablename__ = "internal_links"
 

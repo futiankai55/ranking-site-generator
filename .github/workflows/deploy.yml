@@ -1,0 +1,32 @@
+name: Build Hugo Site & Deploy to Netlify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "output/portal/**"
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.147.9"
+          extended: true
+
+      - name: Build
+        working-directory: output/portal
+        run: hugo --minify
+
+      - name: Deploy to Netlify
+        working-directory: output/portal
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: npx netlify-cli@27 deploy --prod --dir=public

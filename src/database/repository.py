@@ -1,7 +1,7 @@
 from __future__ import annotations
 from datetime import datetime
 from sqlalchemy.orm import Session
-from .models import Site, Article, InternalLink, AdRevenue, SearchMetrics, get_session
+from .models import Site, Article, InternalLink, AdRevenue, SearchMetrics, TrafficMetrics, get_session
 from src.config.schema import SiteConfig
 
 
@@ -193,6 +193,48 @@ def get_site_search_summary(site_id: str) -> dict:
             "total_impressions": total_impressions,
             "avg_ctr": (total_clicks / total_impressions) if total_impressions else 0.0,
             "avg_position": (weighted_position / total_impressions) if total_impressions else 0.0,
+            "latest_date": max((r.date for r in rows), default=None),
+        }
+
+
+def upsert_traffic_metrics(
+    site_id: str,
+    date: str,
+    sessions: int,
+    active_users: int,
+    page_views: int,
+) -> TrafficMetrics:
+    with get_session() as session:
+        existing = session.query(TrafficMetrics).filter_by(site_id=site_id, date=date).first()
+        now = datetime.utcnow()
+        if existing:
+            existing.sessions = sessions
+            existing.active_users = active_users
+            existing.page_views = page_views
+            existing.synced_at = now
+            session.commit()
+            return existing
+        metrics = TrafficMetrics(
+            site_id=site_id,
+            date=date,
+            sessions=sessions,
+            active_users=active_users,
+            page_views=page_views,
+            synced_at=now,
+        )
+        session.add(metrics)
+        session.commit()
+        return metrics
+
+
+def get_site_traffic_summary(site_id: str) -> dict:
+    with get_session() as session:
+        rows = session.query(TrafficMetrics).filter_by(site_id=site_id).all()
+        return {
+            "days_recorded": len(rows),
+            "total_sessions": sum(r.sessions for r in rows),
+            "total_active_users": sum(r.active_users for r in rows),
+            "total_page_views": sum(r.page_views for r in rows),
             "latest_date": max((r.date for r in rows), default=None),
         }
 

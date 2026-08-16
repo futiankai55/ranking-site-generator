@@ -17,12 +17,14 @@ from src.database.repository import (
     get_site_revenue_summary,
     upsert_search_metrics,
     get_site_search_summary,
+    upsert_traffic_metrics,
+    get_site_traffic_summary,
 )
 from src.generator.base import ArticleData
 from src.publisher import hugo as hugo_publisher
 from src.seo.internal_links import build_link_map, inject_internal_links
 from src.seo.structured_data import build_itemlist_jsonld, build_article_jsonld, build_faq_jsonld, inject_jsonld
-from src.analytics import adsense, search_console, google_auth
+from src.analytics import adsense, search_console, ga4, google_auth
 
 
 def _parse_frontmatter(text: str) -> tuple[dict, str]:
@@ -181,10 +183,11 @@ def sync_portal(site_id: str):
 @cli.command()
 @click.option("--site", "site_id", required=True, help="サイトID")
 def report(site_id: str):
-    """コスト・記事数・広告収益・検索指標レポートを表示する"""
+    """コスト・記事数・広告収益・検索指標・GA4トラフィックレポートを表示する"""
     summary = get_site_cost_summary(site_id)
     revenue = get_site_revenue_summary(site_id)
     search = get_site_search_summary(site_id)
+    traffic = get_site_traffic_summary(site_id)
     click.echo(f"\n=== {site_id} レポート ===")
     click.echo(f"記事数:          {summary['article_count']}")
     click.echo(f"入力トークン:    {summary['total_input_tokens']:,}")
@@ -200,6 +203,10 @@ def report(site_id: str):
     click.echo(f"検索表示回数:    {search['total_impressions']:,}")
     click.echo(f"平均CTR:         {search['avg_ctr'] * 100:.2f}%")
     click.echo(f"平均掲載順位:    {search['avg_position']:.1f}")
+    click.echo(f"GA4記録日数:     {traffic['days_recorded']}日（最新: {traffic['latest_date'] or '未同期'}）")
+    click.echo(f"セッション数:    {traffic['total_sessions']:,}")
+    click.echo(f"アクティブユーザー数: {traffic['total_active_users']:,}")
+    click.echo(f"ページビュー数:  {traffic['total_page_views']:,}")
 
 
 @cli.command("sync-adsense")
@@ -274,6 +281,42 @@ def sync_search_console(site_id: str, days: int):
         click.echo(f"  同期: {row['date']} クリック{row['clicks']}件 表示{row['impressions']}回")
 
     click.echo(f"Search Console同期完了: {len(rows)}日分（サイト: {site_url}）")
+
+
+@cli.command("sync-ga4")
+@click.option("--site", "site_id", required=True, help="サイトID")
+@click.option("--days", default=7, show_default=True, help="さかのぼって同期する日数")
+def sync_ga4(site_id: str, days: int):
+    """GA4 Data APIからトラフィック指標を取得しDBに保存する"""
+    property_id = os.getenv("GA4_PROPERTY_ID")
+    if not property_id:
+        raise click.ClickException(
+            "GA4_PROPERTY_ID が未設定です。docs/google-api-setup.md を参照してください。"
+        )
+
+    until = date.today()
+    since = until - timedelta(days=days - 1)
+
+    try:
+        rows = ga4.fetch_daily_traffic(property_id, since, until)
+    except google_auth.GoogleCredentialsError as e:
+        raise click.ClickException(str(e))
+
+    if not rows:
+        click.echo(f"該当データなし（プロパティ: {property_id}, 期間: {since}〜{until}）")
+        return
+
+    for row in rows:
+        upsert_traffic_metrics(
+            site_id=site_id,
+            date=row["date"],
+            sessions=row["sessions"],
+            active_users=row["active_users"],
+            page_views=row["page_views"],
+        )
+        click.echo(f"  同期: {row['date']} セッション{row['sessions']}件 PV{row['page_views']}回")
+
+    click.echo(f"GA4同期完了: {len(rows)}日分（プロパティ: {property_id}）")
 
 
 @cli.command("google-auth")

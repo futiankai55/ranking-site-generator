@@ -1,4 +1,4 @@
-name: Sync AdSense Revenue & Search Console Metrics
+name: Sync AdSense Revenue, Search Console & GA4 Metrics
 
 on:
   schedule:
@@ -34,6 +34,7 @@ jobs:
       - name: Sync metrics for each site
         env:
           ADSENSE_ACCOUNT_ID: ${{ secrets.ADSENSE_ACCOUNT_ID }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GOOGLE_CLIENT_SECRET_PATH: credentials/adsense_client_secret.json
           GOOGLE_TOKEN_PATH: credentials/adsense_token.json
         run: |
@@ -43,6 +44,8 @@ jobs:
             python -m src.cli.main sync-adsense --site "$site_id" --days 3 || echo "!! $site_id のAdSense同期に失敗しました（処理は継続します）"
             echo "=== syncing $site_id (Search Console) ==="
             python -m src.cli.main sync-search-console --site "$site_id" --days 3 || echo "!! $site_id のSearch Console同期に失敗しました（処理は継続します）"
+            echo "=== syncing $site_id (GA4) ==="
+            python -m src.cli.main sync-ga4 --site "$site_id" --days 3 || echo "!! $site_id のGA4同期に失敗しました（処理は継続します）"
           done
 
       - name: Remove credential files
@@ -55,7 +58,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet -- data/db/sites.db; then
             git add data/db/sites.db
-            git commit -m "chore: sync AdSense revenue and Search Console metrics"
+            git commit -m "chore: sync AdSense revenue, Search Console and GA4 metrics"
             git push
           else
             echo "変更なし"
