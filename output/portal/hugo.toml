@@ -9,7 +9,7 @@ timeZone = "Asia/Tokyo"
   [services.googleAnalytics]
     # GA4測定ID（G-から始まるID）。GA4管理画面のデータストリーム詳細から取得して置き換える
     # 参照: docs/google-api-setup.md
-    ID = "G-XXXXXXXXXX"
+    ID = "G-0VW0D9FZ68"
 
 [params]
   description = "AIツール・ドラマ・エンタメなど、さまざまなジャンルのおすすめランキングをまとめてご紹介します。"

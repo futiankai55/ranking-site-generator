@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-metrics
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -59,6 +63,8 @@ jobs:
           if ! git diff --quiet -- data/db/sites.db; then
             git add data/db/sites.db
             git commit -m "chore: sync AdSense revenue, Search Console and GA4 metrics"
+            git fetch origin main
+            git rebase origin/main
             git push
           else
             echo "変更なし"
