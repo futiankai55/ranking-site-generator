@@ -16,7 +16,7 @@ Microsoft CopilotはMicrosoftとOpenAIが共同開発したAIアシスタント�
 
 **Copilotはこんなツール**
 - 提供: Microsoft（アメリカ）
-- 公式URL: https://copilot.microsoft.com
+- 公式サイト: [https://copilot.microsoft.com](https://copilot.microsoft.com)
 - 主な特徴: Windows標準搭載・Microsoft 365との深い統合
 - 主な用途: Office文書作成・Windows操作補助・ビジネス文書効率化
 
@@ -100,20 +100,6 @@ Copilotの無料プランでは追加費用なしでGPT-4相当のAIを利用で
 - Excelでデータ分析・グラフ作成の指示を自然言語で行う
 - PowerPointで「〇〇についてのプレゼン資料を作成して」とスライド自動生成を試みる
 
-## Microsoft Copilotに関するよくある質問
-
-### Q1. Copilotは無料で使えますか？
-
-**A.** はい、https://copilot.microsoft.com や Windows 11のCopilotは無料で利用できます。テキスト生成・画像生成・Web検索機能が無料で利用可能です。ただし、Word・Excel・Outlook内でのCopilot統合機能（Microsoft 365 Copilot）には別途サブスクリプションが必要です。
-
-### Q2. CopilotはChatGPTと同じですか？
-
-**A.** CopilotはOpenAI（ChatGPTの開発元）の技術をベースにしていますが、MicrosoftがWindows・Microsoft 365と統合してカスタマイズした別サービスです。基盤となるAIモデルには類似点がありますが、Microsoft製品との統合という独自の付加価値があります。
-
-### Q3. Microsoft 365 CopilotとCopilot（無料版）の違いは？
-
-**A.** 無料のCopilotはブラウザ・Windows上でのスタンドアロンのAIチャットです。Microsoft 365 Copilot（月額4,497円/人）は、Word・Excel・PowerPoint・Outlook・Teamsのアプリ内に直接Copilot機能が統合されており、文書の自動作成・データ分析・会議要約などが各アプリ内から直接利用できます。
-
 ## まとめ：Microsoft Copilotはどんな人向け？
 
 Microsoft CopilotはWindows・Microsoft 365ユーザーにとって最もコスパに優れたAI活用の入口です。
@@ -135,27 +121,27 @@ Microsoft環境以外でより高度なAI機能を求める場合はChatGPTやCl
   "author": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "publisher": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ai-tools-ranking.example.com/ai-tools-copilot-review/"
+    "@id": "https://kenjatimejp.com/ai-tools/individual/ai-tools-copilot-review/"
   }
 }
 </script>
 
 
-[ChatGPTの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-chatgpt-review/)
+[ChatGPTの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-chatgpt-review/)
 
-[Claudeの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-claude-review/)
+[Claudeの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-claude-review/)
 
-[Geminiの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-gemini-review/)
+[Geminiの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-gemini-review/)
 
-[Perplexity AIの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-perplexity-ai-review/)
+[Perplexity AIの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-perplexity-ai-review/)
 
-[AI（人工知能）ツール・サービスランキング全体を見る](https://ai-tools-ranking.example.com/ai-tools-ranking-top5/)
+[AI（人工知能）ツール・サービスランキング全体を見る](https://kenjatimejp.com/ai-tools/ranking/ai-tools-ranking-top5/)

@@ -16,7 +16,7 @@ Perplexity AIは、AIを活用したリアルタイム検索エンジンです�
 
 **Perplexity AIはこんなツール**
 - 提供: Perplexity AI, Inc.（アメリカ）
-- 公式URL: https://www.perplexity.ai
+- 公式サイト: [https://www.perplexity.ai](https://www.perplexity.ai)
 - 主な特徴: リアルタイムWeb検索＋出典付き回答
 - 主な用途: 調査・リサーチ・情報収集・最新情報確認
 
@@ -94,20 +94,6 @@ IT・金融・スタートアップ・政治など、日々変化する情報を
 - 口コミ・評判調査には「Reddit」フォーカスモードが有効
 - Pro Searchで「複数の視点から比較分析して」と依頼するとより深い調査が可能
 
-## Perplexity AIに関するよくある質問
-
-### Q1. Perplexity AIは無料で使えますか？
-
-**A.** はい、無料プランが提供されています。基本的な検索・回答機能は無料で利用できますが、1日あたりのPro Search（深い調査機能）の利用回数に制限があります。頻繁にリサーチを行う場合はProプラン（月額$20）が適しているとされています。
-
-### Q2. Perplexity AIは日本語に対応していますか？
-
-**A.** はい、日本語での質問に対して日本語で回答します。ただし、参照するWebページが英語のものも多いため、日本語コンテンツに限定したい場合は工夫が必要な場面もあります。
-
-### Q3. ChatGPTとPerplexity AIの違いは何ですか？
-
-**A.** ChatGPTは学習済みの知識から回答を生成するチャットAIで、コンテンツ生成・コーディングが得意です。Perplexity AIはWebをリアルタイムで検索して出典付きで回答する検索特化AIで、最新情報の調査・リサーチが得意です。目的が「情報収集」ならPerplexity AI、「コンテンツ作成」ならChatGPTが向いているとされています。
-
 ## まとめ：Perplexity AIはどんな人向け？
 
 Perplexity AIは、調査・リサーチ・最新情報収集に特化したAIツールです。
@@ -129,27 +115,27 @@ Perplexity AIは、調査・リサーチ・最新情報収集に特化したAI�
   "author": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "publisher": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ai-tools-ranking.example.com/ai-tools-perplexity-ai-review/"
+    "@id": "https://kenjatimejp.com/ai-tools/individual/ai-tools-perplexity-ai-review/"
   }
 }
 </script>
 
 
-[ChatGPTの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-chatgpt-review/)
+[ChatGPTの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-chatgpt-review/)
 
-[Claudeの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-claude-review/)
+[Claudeの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-claude-review/)
 
-[Geminiの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-gemini-review/)
+[Geminiの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-gemini-review/)
 
-[Copilotの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-copilot-review/)
+[Copilotの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-copilot-review/)
 
-[AI（人工知能）ツール・サービスランキング全体を見る](https://ai-tools-ranking.example.com/ai-tools-ranking-top5/)
+[AI（人工知能）ツール・サービスランキング全体を見る](https://kenjatimejp.com/ai-tools/ranking/ai-tools-ranking-top5/)

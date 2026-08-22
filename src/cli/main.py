@@ -99,7 +99,7 @@ def seo(site_id: str):
             jsonld = build_article_jsonld(config, article)
 
         body = inject_jsonld(body, jsonld)
-        body = inject_internal_links(body, article, link_map, config.base_url)
+        body = inject_internal_links(body, article, link_map, config)
 
         frontmatter_end = text.index("---", 3) + 3
         md_file.write_text(text[:frontmatter_end] + "\n\n" + body, encoding="utf-8")

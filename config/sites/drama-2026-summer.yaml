@@ -10,7 +10,7 @@ article_plan:
   top_page: 1
   ranking_articles: 1
   individual_articles: 6
-  faq_articles: 1
+  faq_articles: 0
   related_articles: 0
 
 max_monthly_cost_usd: 10.0

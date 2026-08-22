@@ -10,13 +10,13 @@ slug: "ai-tools-gemini-review"
 
 ## Geminiとは？特徴・概要
 
-GeminiはGoogleが開発・提供しているAIアシスタントです。かつてBardという名称で提供されていましたが、2024年にGeminiへリブランドされました。Google検索・Gmail・Google Docs・Google DriveといったGoogleサービスとのシームレスNな連携が最大の特徴です。
+GeminiはGoogleが開発・提供しているAIアシスタントです。かつてBardという名称で提供されていましたが、2024年にGeminiへリブランドされました。Google検索・Gmail・Google Docs・Google DriveといったGoogleサービスとのシームレスな連携が最大の特徴です。
 
 Googleアカウントを持っていれば追加登録なしで無料から利用できる手軽さも魅力の一つです。最新のWebからリアルタイムで情報を取得して回答できるため、時事情報・最新ニュースを含む質問にも対応できます。
 
 **Geminiはこんなツール**
 - 提供: Google（アメリカ）
-- 公式URL: https://gemini.google.com
+- 公式サイト: [https://gemini.google.com](https://gemini.google.com)
 - 対応言語: 日本語を含む多言語
 - 主な強み: Google連携・最新情報参照・無料での高性能モデル利用
 
@@ -95,20 +95,6 @@ Googleアカウントを持っていれば追加登録なしで無料から使�
 - Google検索連携を活用して最新情報の調査に使う
 - カレンダーと連携してスケジュール管理のサポートに使う
 
-## Geminiに関するよくある質問
-
-### Q1. GeminiとGoogleアシスタントは違うものですか？
-
-**A.** はい、異なるサービスです。Googleアシスタントはスマートフォン・スマートスピーカー向けの音声AIアシスタントです。Geminiはより高度なチャットAIで、Webブラウザ・スマートフォンアプリから利用でき、Google Workspaceとの連携が充実しています。
-
-### Q2. Geminiは最新情報に対応できますか？
-
-**A.** はい、Google検索との統合により、最新情報を参照した回答が可能です。他のAIツールが持つ学習データのカットオフの問題を、リアルタイム検索で補完できる点が特徴です。
-
-### Q3. GeminiはGoogleのどのサービスと連携できますか？
-
-**A.** Gmail・Google Docs・Google Sheets・Google Slides・Google Drive・Google Meetなど、Google Workspaceのサービスと連携可能です（Advancedプランまたは対応するWorkspaceプランが必要な機能があります）。
-
 ## まとめ：Geminiはどんな人向け？
 
 Geminiは、Google Workspaceユーザーと最新情報を必要とする方にとって特に有益なAIツールです。
@@ -130,27 +116,27 @@ Geminiは、Google Workspaceユーザーと最新情報を必要とする方に�
   "author": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "publisher": {
     "@type": "Organization",
     "name": "AIツールランキング",
-    "url": "https://ai-tools-ranking.example.com"
+    "url": "https://kenjatimejp.com"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ai-tools-ranking.example.com/ai-tools-gemini-review/"
+    "@id": "https://kenjatimejp.com/ai-tools/individual/ai-tools-gemini-review/"
   }
 }
 </script>
 
 
-[ChatGPTの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-chatgpt-review/)
+[ChatGPTの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-chatgpt-review/)
 
-[Claudeの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-claude-review/)
+[Claudeの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-claude-review/)
 
-[Perplexity AIの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-perplexity-ai-review/)
+[Perplexity AIの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-perplexity-ai-review/)
 
-[Copilotの詳細はこちら](https://ai-tools-ranking.example.com/ai-tools-copilot-review/)
+[Copilotの詳細はこちら](https://kenjatimejp.com/ai-tools/individual/ai-tools-copilot-review/)
 
-[AI（人工知能）ツール・サービスランキング全体を見る](https://ai-tools-ranking.example.com/ai-tools-ranking-top5/)
+[AI（人工知能）ツール・サービスランキング全体を見る](https://kenjatimejp.com/ai-tools/ranking/ai-tools-ranking-top5/)

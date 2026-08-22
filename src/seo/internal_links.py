@@ -15,6 +15,7 @@ def build_link_map(config: SiteConfig, articles: list[ArticleData]) -> list[dict
                 links.append({
                     "from_slug": article.slug,
                     "to_slug": tool_slug,
+                    "to_type": slug_map[tool_slug].article_type,
                     "anchor_text": f"{item.name}の詳細はこちら",
                 })
 
@@ -23,6 +24,7 @@ def build_link_map(config: SiteConfig, articles: list[ArticleData]) -> list[dict
             links.append({
                 "from_slug": article.slug,
                 "to_slug": ranking_slug,
+                "to_type": slug_map[ranking_slug].article_type,
                 "anchor_text": f"{config.theme}ランキング全体を見る",
             })
 
@@ -33,7 +35,7 @@ def inject_internal_links(
     content: str,
     article: ArticleData,
     links: list[dict],
-    base_url: str,
+    config: SiteConfig,
 ) -> str:
     outgoing = [l for l in links if l["from_slug"] == article.slug]
     inserted: set[str] = set()
@@ -42,7 +44,7 @@ def inject_internal_links(
         if link["to_slug"] in inserted:
             continue
         anchor = link["anchor_text"]
-        url = f"{base_url.rstrip('/')}/{link['to_slug']}/"
+        url = f"{config.base_url.rstrip('/')}/{config.site_id}/{link['to_type']}/{link['to_slug']}/"
         md_link = f"[{anchor}]({url})"
         if anchor not in content and md_link not in content:
             content = content + f"\n\n{md_link}"

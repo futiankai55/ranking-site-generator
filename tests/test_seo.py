@@ -65,5 +65,5 @@ def test_build_link_map_generates_links(config, sample_articles):
 def test_inject_internal_links_appends_links(config, sample_articles):
     links = build_link_map(config, sample_articles)
     article = sample_articles[0]
-    result = inject_internal_links(article.content, article, links, config.base_url)
+    result = inject_internal_links(article.content, article, links, config)
     assert isinstance(result, str)

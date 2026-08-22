@@ -22,7 +22,7 @@ def build_article_jsonld(config: SiteConfig, article: ArticleData) -> str:
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": f"{config.base_url}/{article.slug}/",
+            "@id": f"{config.base_url}/{config.site_id}/{article.article_type}/{article.slug}/",
         },
     }
     return f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>'

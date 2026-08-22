@@ -10,7 +10,7 @@ slug: "contact"
 
 当サイト（kenjatimejp.com）へのお問い合わせは、以下のメールアドレスまでご連絡ください。
 
-**メールアドレス**: futiankai55@gmail.com
+**メールアドレス**: kenjatime3141592@gmail.com
 
 記事の内容に関するご指摘・誤り・ご要望などもお気軽にお寄せください。
 

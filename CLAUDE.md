@@ -127,5 +127,5 @@ ranking-site-generator/
 ## Phase別ロードマップ
 
 - **Phase1（現在）**: Claude Codeスキルによる記事生成・SQLiteでの進捗/重複/広告収益/検索指標管理・Hugo静的サイト生成・**Netlify**へのデプロイ・AdSense自動広告タグ埋め込み・AdSense広告収益/Search Console検索指標データ同期（`sync-adsense`/`sync-search-console` CLI、手動実行）
-- **Phase2**: Gitリポジトリ化とGitHub Actions CI/CD整備（`.github/workflows/sync-metrics.yml` の自動実行有効化、Hugoビルド〜Netlifyデプロイの自動化）・DALL-E 3画像生成・WordPress連携オプション・GA4トラフィック計測の追加
+- **Phase2**: Gitリポジトリ化とGitHub Actions CI/CD整備（`.github/workflows/sync-metrics.yml` の自動実行有効化、Hugoビルド〜Netlifyデプロイの自動化）・WordPress連携オプション・GA4トラフィック計測の追加
 - **Phase3**: PostgreSQL・Celery非同期・マルチサイト一括生成・Streamlit管理画面（記事生成状況と広告収益をまとめたダッシュボード）

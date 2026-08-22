@@ -31,14 +31,18 @@ timeZone = "Asia/Tokyo"
   url = "/index.xml"
 
 [menu]
-  [[menu.footer]]
+  [[menu.main]]
     name = "プライバシーポリシー"
     url = "/privacy/"
     weight = 10
-  [[menu.footer]]
+  [[menu.main]]
     name = "お問い合わせ"
     url = "/contact/"
     weight = 20
+  [[menu.main]]
+    name = "運営者情報"
+    url = "/about/"
+    weight = 30
 
 [taxonomies]
   category = "categories"
