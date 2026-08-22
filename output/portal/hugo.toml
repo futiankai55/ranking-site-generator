@@ -4,6 +4,7 @@ title = "kenjatimejp - ランキングまとめ"
 theme = "PaperMod"
 defaultContentLanguage = "ja"
 timeZone = "Asia/Tokyo"
+enableRobotsTXT = true
 
 [services]
   [services.googleAnalytics]
@@ -32,17 +33,33 @@ timeZone = "Asia/Tokyo"
 
 [menu]
   [[menu.main]]
+    name = "AIツール"
+    url = "/ai-tools/"
+    weight = 10
+  [[menu.main]]
+    name = "ドラマ"
+    url = "/drama-2026-summer/"
+    weight = 20
+  [[menu.main]]
+    name = "海外旅行"
+    url = "/overseas-travel/"
+    weight = 30
+  [[menu.main]]
+    name = "世界遺産"
+    url = "/world-heritage/"
+    weight = 40
+  [[menu.main]]
     name = "プライバシーポリシー"
     url = "/privacy/"
-    weight = 10
+    weight = 50
   [[menu.main]]
     name = "お問い合わせ"
     url = "/contact/"
-    weight = 20
+    weight = 60
   [[menu.main]]
     name = "運営者情報"
     url = "/about/"
-    weight = 30
+    weight = 70
 
 [taxonomies]
   category = "categories"

@@ -1,48 +1,30 @@
 {{- define "main" }}
 
-{{- if site.Params.homeInfoParams }}
-{{- partial "home_info.html" . }}
-{{- end }}
+<div class="portal-layout">
+  <section class="portal-main">
+    <h2 class="portal-section-title">最新記事</h2>
+    <div class="article-grid">
+      {{- range first 12 (sort site.RegularPages "Date" "desc") }}
+      <article class="article-card">
+        <a href="{{ .Permalink }}" class="article-card-link">
+          {{- with .Params.cover.image }}
+          <div class="article-card-image">
+            <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+          </div>
+          {{- end }}
+          <div class="article-card-body">
+            <span class="article-card-category">{{ .FirstSection.Title }}</span>
+            <h3 class="article-card-title">{{ .Title }}</h3>
+            <p class="article-card-summary">{{ .Summary | plainify | htmlUnescape | truncate 80 }}</p>
+            <time class="article-card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+          </div>
+        </a>
+      </article>
+      {{- end }}
+    </div>
+  </section>
 
-<div class="theme-grid">
-  {{- range sort site.Data.themes "title" }}
-  <a class="theme-card" href="{{ .url | relURL }}">
-    <h2>{{ .title }}</h2>
-    <p>{{ .description }}</p>
-  </a>
-  {{- end }}
+  {{- partial "sidebar.html" . }}
 </div>
-
-<style>
-  .theme-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  .theme-card {
-    display: block;
-    padding: 1.2rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--entry);
-    color: var(--content);
-    text-decoration: none;
-    transition: border-color 0.2s ease;
-  }
-  .theme-card:hover {
-    border-color: var(--primary);
-  }
-  .theme-card h2 {
-    margin: 0 0 0.4rem;
-    font-size: 1.1rem;
-    color: var(--primary);
-  }
-  .theme-card p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--secondary);
-  }
-</style>
 
 {{- end }}

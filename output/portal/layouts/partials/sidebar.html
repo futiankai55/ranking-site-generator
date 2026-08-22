@@ -1,0 +1,17 @@
+<aside class="portal-sidebar">
+  <div class="sidebar-widget">
+    <h3 class="sidebar-widget-title">カテゴリー</h3>
+    <ul class="sidebar-category-list">
+      {{- range site.Sections }}
+      {{- if .Parent.IsHome }}
+      <li class="sidebar-category-item">
+        <a href="{{ .Permalink }}">
+          <span class="sidebar-category-name">{{ .Title }}</span>
+          <span class="sidebar-category-count">{{ len .RegularPagesRecursive }}</span>
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</aside>
